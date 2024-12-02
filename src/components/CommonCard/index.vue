@@ -64,3 +64,15 @@ export default {
   color: #666;
 }
 </style>
+
+<style lang="css">
+.emphasis {
+  /*
+  用于强调,放到Commcard组件中,
+  放到新的style css文件中,不要有scoped
+   */
+  margin-left: 5px;
+  color: #333;
+  font-weight: 700;
+}
+</style>

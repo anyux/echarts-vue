@@ -25,6 +25,11 @@ export default {
       </el-col>
       <el-col :span="6">
         <el-card>
+          <total-orders/>
+        </el-card>
+      </el-col>
+      <el-col :span="6">
+        <el-card>
           <total-users/>
         </el-card>
       </el-col>
@@ -33,12 +38,7 @@ export default {
           <today-user/>
         </el-card>
       </el-col>
-      <el-col :span="6">
-        <el-card>
-          <total-orders/>
 
-        </el-card>
-      </el-col>
     </el-row>
   </div>
 </template>
