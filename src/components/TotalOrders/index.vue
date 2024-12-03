@@ -18,21 +18,60 @@ export default {
     // 调用echarts对象初始化
     // init(dom,样式,option)
     const chart = this.$echarts.init(chartDom);
+    // 设置配置项
     chart.setOption({
       xAxis: {
-
+        // value,category,time,log
+        // 适用于离散的类目数据
+        // type: 'value',
+        type: 'category',
+        // type: 'time',
+        // type: 'log',
+        // 不显示x轴
+        show: false,
+        // 数据点与坐标轴之间不留空隙
+        boundaryGap: false
       },
       yAxis: {
-
+        // 不显示y轴
+        show: false
       },
+      // 数据序列
       series: [
         {
+          // 折线图
+          type: 'line',
+          // 数据数组,表示折线的各个数据点
           data: [
               620,432,220,534,790,430,220,320,532,320,834,690,530,220,620
           ],
-          type: 'line',
+          // 设置折线下方的区域样式
+          areaStyle: {
+            // 填充区域为 purple
+            color: 'purple'
+          },
+          // 设置折线样式
+          lineStyle: {
+            // 折线宽度为0,即不显示折线
+            width: 0
+          },
+          // 设置数据点样式
+          itemStyle: {
+            // 数据点透明度为0,即不显示数据点
+            opacity: 0
+          },
+          // 使折线平滑
+          smooth: true
         }
-      ]
+      ],
+      // 图表网格
+      grid: {
+        // 网格边距设置为0,表示图表填充整个容器
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0
+      }
     })
   }
 }
